@@ -1,0 +1,22 @@
+.header {
+    display: flex;
+    padding: 15px 30px;
+
+    &--logo {
+        font-size: 1.3em;
+        font-weight: bold;
+    }
+
+    &--links {
+        padding: 5px;
+        
+        a {
+            margin: 10px;
+            color: black;
+
+            &:hover {
+                color: green;
+            }
+        }
+    }
+}
