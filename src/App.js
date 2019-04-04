@@ -4,8 +4,8 @@ import './App.scss';
 
 // import components
 import { Layout } from './components/Layout/Layout';
-import { Home } from './components/Home/Home.js';
-import { Basket } from './components/Basket/Basket.js';
+import { Home } from './components/Home/Home';
+import { Basket } from './components/Basket/Basket';
 import { Product } from './components/Product/Product';
 
 class App extends React.Component {
@@ -17,7 +17,7 @@ class App extends React.Component {
             <Route exact path={'/'} component={Home} />
             <Route exact path={'/home'} component={Home} />
             <Route exact path={'/basket'} component={Basket} />
-            <Route exact path={'/produkt/:id'} component={Product} />
+            <Route exact path={'/product/:id'} component={Product} />
           </Switch>
         </Layout>
       </BrowserRouter>
