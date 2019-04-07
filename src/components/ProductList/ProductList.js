@@ -1,19 +1,16 @@
 import React from 'react';
 import { Product } from './SingleProduct';
 import './ProductList.scss';
-import products from './products';
 import { Pagination, PaginationItem, PaginationLink } from 'reactstrap';
-import { timingSafeEqual } from 'crypto';
 
 export class ProductList extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-        products,
         currentPage: 0,
         currentProducts: [0, 5]
     };
-    this.elements = this.state.products.products.length;
+    this.elements = this.props.sorted.products.length;
     this.pageSize = 6;
     this.pagesCount = Math.ceil(this.elements / this.pageSize);
   }
@@ -41,7 +38,7 @@ export class ProductList extends React.Component {
                     )}
                 </Pagination>
                     {
-                        (this.state.products.products.slice(this.state.currentProducts[0], this.state.currentProducts[1])).map((product, i) => (
+                        (this.props.sorted.products.slice(this.state.currentProducts[0], this.state.currentProducts[1])).map((product, i) => (
                             <Product
                                 key={i}
                                 index={i}
