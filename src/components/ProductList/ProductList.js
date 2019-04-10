@@ -1,4 +1,5 @@
 import React from 'react';
+import { connect } from 'react-redux';
 import { Product } from './SingleProduct';
 import './ProductList.scss';
 import { Pagination, PaginationItem, PaginationLink } from 'reactstrap';
@@ -56,3 +57,11 @@ export class ProductList extends React.Component {
         );
     };
 }
+
+function mapStateToProps(state) {
+    return {
+        products: state.products
+    }
+  }
+  
+  export default connect(mapStateToProps)(ProductList);

@@ -1,0 +1,58 @@
+.basket {
+    &--name {
+        font-size: 2em;
+        padding: 30px;
+    }
+    &--product {
+        padding: 5px;
+        margin: 5px 0;
+        border: 1px #ddd solid;
+        &-photo {
+            img {
+                width: 100%;
+                height: auto;
+            }
+        }
+        &-description {
+            &-name {
+                font-size: 1.2em;
+            }
+            &-text {
+                font-size: 0.9em;
+            }
+        }
+        &-price, &-quantity {
+            text-align: center;
+        }
+        &-price {
+            padding: 20px;
+            color: #666;
+        }
+        &-quantity {
+            button, p {
+                display: inline-block;
+            }
+            p {
+                padding: 20px;
+            }
+        }
+
+    }
+    &--discount, &--summary, &--pay {
+        text-align: right;
+        padding: 5px;
+    }
+    &--discount {
+        input {
+            text-align: center;
+            padding: 5px;
+        }
+    }
+    &--summary {
+        font-size: 1.3em;
+        font-weight: bold;
+    }
+    &--pay {
+
+    }
+}

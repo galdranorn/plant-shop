@@ -1,43 +1,60 @@
 import React from 'react';
+import { bindActionCreators } from 'redux';
+import { connect } from 'react-redux';
 import './Product.scss';
-import products from '../ProductList/products';
+import { addToBasket } from '../../actions/actions-product';
+
 
 export class Product extends React.Component {
-  constructor(props) {
-    super(props);
-    this.state = products;
-    console.log(this.props);
-  }
-
   render() {
     return (
       <div className="productPage container">
         <div className="row">
           <div className="productPage--image col-4">
             <p className="productPage--image-info">
-              {this.state.products[this.props.match.params.id].additionalInfo}
+              {this.props.products[this.props.match.params.id].additionalInfo}
             </p>
             <img 
               className="productPage--image-photo" 
-              src={this.state.products[this.props.match.params.id].imgSrc} 
+              src={this.props.products[this.props.match.params.id].imgSrc} 
               alt="plant" 
             />
           </div>
 
           <div className="productPage--description col-7">
             <p className="productPage--description-name">
-              {this.state.products[this.props.match.params.id].name}
+              {this.props.products[this.props.match.params.id].name}
             </p>
             <p className="productPage--description-price">
-              ${this.state.products[this.props.match.params.id].price}
+              ${this.props.products[this.props.match.params.id].price}
             </p>
             <p>
-            {this.state.products[this.props.match.params.id].text}
+            {this.props.products[this.props.match.params.id].text}
             </p>
-            <button className="productPage--description-button">Buy me!</button>
+            <button 
+              className="productPage--description-button" 
+              onClick={() => this.props.addToBasket(this.props.products[this.props.match.params.id])}
+            >
+              Buy me!
+            </button>
           </div>
         </div>
       </div>
     );
   }
 };
+
+function mapStateToProps(state) {
+  return {
+      products: state.products
+  }
+}
+
+function matchDispatchToProps(dispatch) {
+  return bindActionCreators(
+      {addToBasket: addToBasket}, dispatch
+  )
+}
+
+
+export default connect(mapStateToProps, matchDispatchToProps)(Product);

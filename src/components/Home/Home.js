@@ -1,17 +1,21 @@
 import React from 'react';
+import { connect } from 'react-redux';
 import { ProductList } from '../ProductList/ProductList';
 import './Home.scss';
 import { sortBy } from './sorting';
-import products from '../ProductList/products';
 
-export class Home extends React.Component {
+class Home extends React.Component {
     constructor(props) {
         super(props);
-        this.state = products;
+        this.state = {
+            "products": this.props.products
+        };
     }
 
     sortBy(event) {
-        this.setState(products.products.sort(sortBy(event.target.dataset.prop, event.target.dataset.order)));
+        this.setState({
+            "products": this.state.products.sort(sortBy(event.target.dataset.prop, event.target.dataset.order))
+        });
     }
 
     render() {
@@ -33,3 +37,11 @@ export class Home extends React.Component {
         )
     }
 }
+
+function mapStateToProps(state) {
+    return {
+        products: state.products
+    }
+  }
+  
+  export default connect(mapStateToProps)(Home);

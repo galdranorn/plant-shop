@@ -4,9 +4,9 @@ import './App.scss';
 
 // import components
 import { Layout } from './components/Layout/Layout';
-import { Home } from './components/Home/Home';
-import { Basket } from './components/Basket/Basket';
-import { Product } from './components/Product/Product';
+import Home from './components/Home/Home';
+import Basket from './components/Basket/Basket';
+import Product from './components/Product/Product';
 
 class App extends React.Component {
   render() {
