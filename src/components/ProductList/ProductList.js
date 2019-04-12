@@ -1,5 +1,4 @@
 import React from 'react';
-import { connect } from 'react-redux';
 import { Product } from './SingleProduct';
 import './ProductList.scss';
 import { Pagination, PaginationItem, PaginationLink } from 'reactstrap';
@@ -8,10 +7,11 @@ export class ProductList extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
+        products: this.props.products,
         currentPage: 0,
         currentProducts: [0, 5]
     };
-    this.elements = this.props.sorted.products.length;
+    this.elements = this.props.sorted.length;
     this.pageSize = 6;
     this.pagesCount = Math.ceil(this.elements / this.pageSize);
   }
@@ -26,7 +26,6 @@ export class ProductList extends React.Component {
 
   render() {
         const { currentPage } = this.state;
-
         return (
             <div className="productList col-9">
                 <Pagination aria-label="Page navigation example">
@@ -39,29 +38,25 @@ export class ProductList extends React.Component {
                     )}
                 </Pagination>
                     {
-                        (this.props.sorted.products.slice(this.state.currentProducts[0], this.state.currentProducts[1])).map((product, i) => (
+                        (this.props.sorted.slice(this.state.currentProducts[0], this.state.currentProducts[1])).map((product, i) => {
+                            return (
                             <Product
+                                id={product.id}
                                 key={i}
-                                index={i}
+                                //index={this.state.currentPage*this.pageSize+i}
                                 name={product.name}
                                 price={product.price}
                                 text={product.text}
                                 showText={false}
                                 additionalInfo={product.additionalInfo}
                                 imgSrc={product.imgSrc}
+                                sorted={this.props.sorted}
                             />
                         )
+                    }
                         )
                     }
             </div>
         );
     };
 }
-
-function mapStateToProps(state) {
-    return {
-        products: state.products
-    }
-  }
-  
-  export default connect(mapStateToProps)(ProductList);

@@ -4,7 +4,7 @@ import './SingleProduct.scss';
 
 export const Product = (props) => (
     <NavLink
-        exact to={"/product/" + props.index}
+        exact to={"/product/" + props.id}
         index={props.index}
         className="product col-5">
 

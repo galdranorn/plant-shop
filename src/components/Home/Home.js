@@ -7,14 +7,13 @@ import { sortBy } from './sorting';
 class Home extends React.Component {
     constructor(props) {
         super(props);
-        this.state = {
-            "products": this.props.products
-        };
+        this.state = {};
     }
 
     sortBy(event) {
+        event.preventDefault();
         this.setState({
-            "products": this.state.products.sort(sortBy(event.target.dataset.prop, event.target.dataset.order))
+            "products": this.props.products.concat().sort(sortBy(event.target.dataset.prop, event.target.dataset.order))
         });
     }
 
@@ -32,7 +31,7 @@ class Home extends React.Component {
                         <li className='home--sorting-list-element' data-prop='price' data-order='desc' onClick={event => this.sortBy(event)}>Price: high to low</li>
                     </ul>
                 </div>
-                <ProductList sorted={this.state}/>
+                <ProductList sorted={this.state.products || this.props.products}/>
             </div>
         )
     }
