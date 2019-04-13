@@ -2,26 +2,41 @@ import React from 'react';
 import { NavLink } from 'react-router-dom';
 import './Header.scss';
 
-export const Header = props => {
+export const Header = () => {
     return (
         <div className="header justify-content-between">
-            <div className="header--logo">
+            <div className="header__logo">
                 PLANT SHOP
-            </div>
-            <div className="header--links">
-                <NavLink exact to="/home" activeClassName="activeLink">
+                </div>
+            <div className="header__links">
+                <NavLink
+                    className="header__links--link"
+                    activeClassName="header__links--active"
+                    exact to="/">
                     Home
                 </NavLink>
-                <NavLink exact to="/faq" activeClassName="activeLink">
+                <NavLink
+                    className="header__links--link"
+                    activeClassName="header__links--active"
+                    exact to="/faq">
                     FAQ
                 </NavLink>
-                <NavLink exact to="/rules" activeClassName="activeLink">
+                <NavLink
+                    className="header__links--link"
+                    activeClassName="header__links--active"
+                    exact to="/rules">
                     Rules
                 </NavLink>
-                <NavLink exact to="/contact" activeClassName="activeLink">
+                <NavLink
+                    className="header__links--link"
+                    activeClassName="header__links--active"
+                    exact to="/contact">
                     Contact
                 </NavLink>
-                <NavLink exact to="/basket" activeClassName="activeLink">
+                <NavLink
+                    className="header__links--link"
+                    activeClassName="header__links--active"
+                    exact to="/basket">
                     Basket
                 </NavLink>
             </div>

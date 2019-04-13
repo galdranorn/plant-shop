@@ -1,21 +1,22 @@
 .home {
     display: flex;
-    &--sorting {
 
-        &-header {
+    &__sorting {
+
+        &--header {
             font-weight: bold;
             color: #555;
         }
-        &-list {
+        
+        &--list {
             list-style-type: none;
             padding: 0 0 30px;
             font-size: 0.9em;
             color: #777;
             border-bottom: 1px solid #777;
 
-            &--element {
+            &-element {}
 
-            }
         }
     }
 }

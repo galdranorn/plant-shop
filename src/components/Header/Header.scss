@@ -2,21 +2,24 @@
     display: flex;
     padding: 15px 30px;
 
-    &--logo {
+    &__logo {
         font-size: 1.3em;
         font-weight: bold;
     }
 
-    &--links {
+    &__links {
         padding: 5px;
         
-        a {
+        &--link {
             margin: 10px;
             color: black;
-
             &:hover {
                 color: green;
             }
+        }
+        &--active {
+            font-weight: bold;
+            color: green;
         }
     }
 }

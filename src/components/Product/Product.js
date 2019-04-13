@@ -23,29 +23,29 @@ export class Product extends React.Component {
     return (
       <div className="productPage container">
         <div className="row">
-          <div className="productPage--image col-4">
-            <p className="productPage--image-info">
+          <div className="productPage__image col-4">
+            <p className="productPage__image--info">
               {this.props.products[this.state.id].additionalInfo}
             </p>
             <img 
-              className="productPage--image-photo" 
+              className="productPage__image--photo" 
               src={this.props.products[this.state.id].imgSrc} 
               alt="plant" 
             />
           </div>
 
-          <div className="productPage--description col-7">
-            <p className="productPage--description-name">
+          <div className="productPage__description col-7">
+            <p className="productPage__description--name">
               {this.props.products[this.state.id].name}
             </p>
-            <p className="productPage--description-price">
+            <p className="productPage__description--price">
               ${this.props.products[this.state.id].price}
             </p>
             <p>
             {this.props.products[this.state.id].text}
             </p>
             <button 
-              className="productPage--description-button" 
+              className="productPage__description--button" 
               onClick={() => this.props.addToBasket(this.props.products[this.state.id])}
             >
               Buy me!

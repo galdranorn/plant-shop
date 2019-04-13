@@ -1,0 +1,31 @@
+.contact {
+    text-align: center;
+
+    &__header {
+        padding: 20px;
+    }
+
+    &__data {
+        margin: 30px;
+        padding: 20px;
+        color: #666;
+
+        &--name, &--open {
+            font-weight: bold;
+            font-size: 1.3em;
+        }
+        &--phone, &--mail {
+            padding: 10px;
+            display: block;
+            color: green;
+            text-decoration: none;
+            &:hover {
+                color: green;
+                font-weight: bold;
+            }
+        }
+        &--open {
+            margin: 40px;
+        }
+    }
+}

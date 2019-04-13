@@ -1,19 +1,19 @@
 .basket {
-    &--name {
+    &__name {
         font-size: 2em;
         padding: 30px;
     }
-    &--product {
+    &__product {
         padding: 5px;
         margin: 5px 0;
         border: 1px #ddd solid;
-        &-photo {
-            img {
+        &--photo {
+            &-img {
                 width: 100%;
                 height: auto;
             }
         }
-        &-description {
+        &--description {
             &-name {
                 font-size: 1.2em;
             }
@@ -21,38 +21,35 @@
                 font-size: 0.9em;
             }
         }
-        &-price, &-quantity {
+        &--price, &--quantity {
             text-align: center;
         }
-        &-price {
+        &--price {
             padding: 20px;
             color: #666;
         }
-        &-quantity {
-            button, p {
+        &--quantity {
+            &-button, &-value {
                 display: inline-block;
             }
-            p {
+            &-value {
                 padding: 20px;
             }
         }
 
     }
-    &--discount, &--summary, &--pay {
+    &__discount, &__summary, &__pay {
         text-align: right;
         padding: 5px;
     }
-    &--discount {
-        input {
+    &__discount {
+        &-input {
             text-align: center;
             padding: 5px;
         }
     }
-    &--summary {
+    &__summary {
         font-size: 1.3em;
         font-weight: bold;
-    }
-    &--pay {
-
     }
 }

@@ -1,3 +1,27 @@
 .productList {
     text-align: center;
+
+    &__product {
+        background: #eee;
+        display: inline-block;
+        text-align: left;
+        margin: 5px;
+        padding: 10px;
+        
+        &:hover {
+            text-decoration: none;
+            background: lightgreen;
+        }
+        
+        &--info, &--name, &--price {
+            color: #333;
+        }
+        &--info, &--name {
+            font-weight: bold;
+        }
+        &--photo {
+            width: 100%;
+            height: auto;
+        }
+    }
 }

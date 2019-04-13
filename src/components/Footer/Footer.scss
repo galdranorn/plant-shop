@@ -1,0 +1,24 @@
+.footer {
+    display: flex;
+    padding: 15px 30px;
+
+    &__copyright {
+        color: #666;
+    }
+
+    &__links {
+        padding: 5px;
+        
+        &--link {
+            margin: 10px;
+            color: black;
+            &:hover {
+                color: green;
+            }
+        }
+        &--active {
+            font-weight: bold;
+            color: green;
+        }
+    }
+}

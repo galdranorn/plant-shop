@@ -1,0 +1,15 @@
+.rules {
+    &__header, &__summary {
+        text-align: center;
+        padding: 20px;
+    }
+
+    &__point {
+        padding: 10px;
+        color: #666;
+    }
+    &__summary {
+        font-weight: bold;
+        font-size: 1.1em;
+    }
+}
