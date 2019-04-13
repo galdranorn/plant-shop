@@ -2,54 +2,65 @@
     &__name {
         font-size: 2em;
         padding: 30px;
+        text-align: center;
     }
-    &__product {
-        padding: 5px;
-        margin: 5px 0;
-        border: 1px #ddd solid;
-        &--photo {
-            &-img {
+
+// basket 'active' mode
+    &__active {
+        &--product {
+            padding: 5px;
+            margin: 5px 0;
+            border: 1px #ddd solid;
+            &-photo-img {
                 width: 100%;
                 height: auto;
             }
-        }
-        &--description {
-            &-name {
-                font-size: 1.2em;
-            }
-            &-text {
-                font-size: 0.9em;
-            }
-        }
-        &--price, &--quantity {
-            text-align: center;
-        }
-        &--price {
-            padding: 20px;
-            color: #666;
-        }
-        &--quantity {
-            &-button, &-value {
+            &-quantity-button, &-quantity-value {
                 display: inline-block;
+                margin: 20px 10px;
+                text-align: center;
             }
-            &-value {
-                padding: 20px;
+            &-price {
+                text-align: center;
+                padding: 20px 0;
             }
         }
-
-    }
-    &__discount, &__summary, &__pay {
-        text-align: right;
-        padding: 5px;
-    }
-    &__discount {
-        &-input {
-            text-align: center;
+        &--discount, &--sum, &--pay {
+            text-align: right;
             padding: 5px;
+            margin: 5px;
+            &-input {
+                text-align: center;
+                padding: 5px;
+            }
+            &-cash {
+                font-weight: bold;
+            }
         }
     }
+
+// basket in 'summary' mode
     &__summary {
-        font-size: 1.3em;
-        font-weight: bold;
+        &--line {
+            background: #efefef;
+            font-weight: bold;
+            padding: 5px;
+            margin: 5px 0;
+            border: 1px #dddddd solid;
+            &-element, &-element-sum {
+                text-align: center;
+            }
+            &-element-name, &-element-sum {
+                font-size: 1.5em;
+            }
+        }
+        &--product {
+            padding: 5px;
+            margin: 5px 0;
+            border: 1px #ddd solid;
+            &-price {
+                text-align: center;
+            }
+        }
     }
 }
