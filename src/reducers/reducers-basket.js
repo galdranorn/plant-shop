@@ -1,10 +1,15 @@
 export default function (state={"added": [], "summary": 0}, action) {
     switch (action.type) {
         case "ADD_TO_BASKET":
-            console.log(state);
+            let added = [...state.added, action.payload];
+            state.added.map((product) => {
+                if (product.id === action.payload.id) {
+                    product.quantity += 1;
+                    added = [...state.added]
+                }
+            })
             return {
-                "added": [...state.added, action.payload],
-                "quantity": 0,
+                "added": added,
                 "summary": state.summary + action.payload.price,
             }
 
@@ -12,7 +17,6 @@ export default function (state={"added": [], "summary": 0}, action) {
             state.added.map((product) => { if (product.id === action.payload.id) { product.quantity += 1 } })
             return {
                 "added": [...state.added],
-                "quantity": state.quantity+1,
                 "summary": state.summary + action.payload.price,
             }
 
@@ -20,7 +24,6 @@ export default function (state={"added": [], "summary": 0}, action) {
             state.added.map((product) => { if (product.id === action.payload.id) { product.quantity -= 1 } })
             return {
                 "added": state.added.filter(function (object) { return object.quantity !== 0 }),
-                "quantity": state.quantity-1,
                 "summary": state.summary - action.payload.price,
             }
 
