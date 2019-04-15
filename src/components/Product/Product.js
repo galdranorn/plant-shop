@@ -2,7 +2,7 @@ import React from 'react';
 import { bindActionCreators } from 'redux';
 import { connect } from 'react-redux';
 import './Product.scss';
-import { addToBasket } from '../../actions/actions-product';
+import { addToCart } from '../../actions/actions-product';
 
 
 export class Product extends React.Component {
@@ -46,7 +46,7 @@ export class Product extends React.Component {
             </p>
             <button 
               className="productPage__description--button" 
-              onClick={() => this.props.addToBasket(this.props.products[this.state.id])}
+              onClick={() => this.props.addToCart(this.props.products[this.state.id])}
             >
               Buy me!
             </button>
@@ -65,7 +65,7 @@ function mapStateToProps(state) {
 
 function matchDispatchToProps(dispatch) {
   return bindActionCreators(
-      {addToBasket: addToBasket}, dispatch
+      {addToCart: addToCart}, dispatch
   )
 }
 

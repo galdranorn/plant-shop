@@ -36,8 +36,8 @@ export const Footer = () => {
                 <NavLink 
                     className="footer__links--link"
                     activeClassName="footer__links--active" 
-                    exact to="/basket">
-                    Basket
+                    exact to="/cart">
+                    Cart
                 </NavLink>
             </div>
         </div>

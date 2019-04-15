@@ -1,11 +1,11 @@
-.basket {
+.cart {
     &__name {
         font-size: 2em;
         padding: 30px;
         text-align: center;
     }
 
-// basket 'active' mode
+// cart 'active' mode
     &__active {
         &--product {
             padding: 5px;
@@ -39,7 +39,7 @@
         }
     }
 
-// basket in 'summary' mode
+// cart in 'summary' mode
     &__summary {
         &--line {
             background: #efefef;

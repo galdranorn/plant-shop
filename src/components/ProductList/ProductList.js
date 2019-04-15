@@ -9,7 +9,7 @@ export class ProductList extends React.Component {
     this.state = {
         products: this.props.products,
         currentPage: 0,
-        currentProducts: [0, 5]
+        currentProducts: [0, 6]
     };
     this.elements = this.props.sorted.length;
     this.pageSize = 6;

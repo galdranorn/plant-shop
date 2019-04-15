@@ -1,6 +1,6 @@
 export default function (state={"added": [], "summary": 0}, action) {
     switch (action.type) {
-        case "ADD_TO_BASKET":
+        case "ADD_TO_CART":
             let added = [...state.added, action.payload];
             state.added.map((product) => {
                 if (product.id === action.payload.id) {

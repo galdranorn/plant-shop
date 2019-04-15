@@ -1,8 +1,8 @@
 import React from 'react';
-import BasketActive from './BasketActive';
-import BasketSummary from './BasketSummary';
+import CartActive from './CartActive';
+import CartSummary from './CartSummary';
 
-export default class Basket extends React.Component {
+export default class Cart extends React.Component {
     constructor(props) {
         super(props);
         this.state = { "summary": false }
@@ -15,13 +15,13 @@ export default class Basket extends React.Component {
     render() {
         if (this.state.summary === false) {
             return (
-                <div className="basket container">
-                    <BasketActive />
+                <div className="cart container">
+                    <CartActive />
 
-                    <div className="basket__active--pay row">
+                    <div className="cart__active--pay row">
                         <div className="col-8"></div>
                         <div className="col-4">
-                            <button className="basket__active--functionalities-pay" onClick={() => { this.initSummary() }}>Pay and finish order</button>
+                            <button className="cart__active--functionalities-pay" onClick={() => { this.initSummary() }}>Pay and finish order</button>
                         </div>
                     </div>
                     
@@ -29,7 +29,7 @@ export default class Basket extends React.Component {
             )
         }
         else if (this.state.summary === true) {
-            return <BasketSummary />
+            return <CartSummary />
         }
     }
 }

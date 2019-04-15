@@ -1,7 +1,7 @@
 export default function() {
     return [
         {
-            "name" : "Plant 1",
+            "name" : "Monstera deliciosa",
             "price": 69.00,
             "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.",
             "additionalInfo": "Bestseller",
@@ -10,7 +10,7 @@ export default function() {
             "quantity": 1
         },
         {
-            "name": "Plant 2",
+            "name": "Epipremnym arrabiata",
             "price": 159.00,
             "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.",
             "additionalInfo": "Ostatnia sztuka",
@@ -19,7 +19,7 @@ export default function() {
             "quantity": 1
         },
         {
-            "name": "Plant 3",
+            "name": "Bifurcatum platycerium",
             "price": 215.00,
             "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.",
             "additionalInfo": ".",
@@ -28,7 +28,7 @@ export default function() {
             "quantity": 1
         },
         {
-            "name": "Plant 4",
+            "name": "Opuntia howeyi",
             "price": 59.00,
             "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.",
             "additionalInfo": ".",
@@ -37,7 +37,7 @@ export default function() {
             "quantity": 1
         },
         {
-            "name": "Plant 5",
+            "name": "Haworthia fasciata",
             "price": 349.00,
             "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.",
             "additionalInfo": ".",
@@ -46,7 +46,7 @@ export default function() {
             "quantity": 1
         },
         {
-            "name": "Plant 6",
+            "name": "Epipremnym aureum",
             "price": 55.00,
             "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.",
             "additionalInfo": "Nowosc",
@@ -55,7 +55,7 @@ export default function() {
             "quantity": 1
         },
         {
-            "name" : "Plant 7",
+            "name" : "Syngonium auritum",
             "price": 69.00,
             "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.",
             "additionalInfo": "Bestseller",
@@ -64,7 +64,7 @@ export default function() {
             "quantity": 1
         },
         {
-            "name": "Plant 8",
+            "name": "Crassula ovata",
             "price": 159.00,
             "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.",
             "additionalInfo": "Ostatnia sztuka",
@@ -73,7 +73,7 @@ export default function() {
             "quantity": 1
         },
         {
-            "name": "Plant 9",
+            "name": "Sempervivum tectorum",
             "price": 215.00,
             "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.",
             "additionalInfo": ".",
@@ -82,7 +82,7 @@ export default function() {
             "quantity": 1
         },
         {
-            "name": "Plant 10",
+            "name": "Auritum syngonium",
             "price": 59.00,
             "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.",
             "additionalInfo": ".",
@@ -90,5 +90,24 @@ export default function() {
             "id": 10,
             "quantity": 1
         },
+        {
+            "name": "Platycerium bifurcatum",
+            "price": 59.00,
+            "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.",
+            "additionalInfo": ".",
+            "imgSrc": "../../images/plant11.png",
+            "id": 11,
+            "quantity": 1
+        },
+        {
+            "name": "Schefflera arboricola",
+            "price": 59.00,
+            "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.",
+            "additionalInfo": ".",
+            "imgSrc": "../../images/plant12.png",
+            "id": 12,
+            "quantity": 1
+        },
+
     ]
 }
