@@ -1,8 +1,10 @@
-export const clickProduct = (product) => {
-    console.log(product.name)
+export const addDiscount = (value, code) => {
     return {
-        type: "PRODUCT_CLICKED",
-        payload: product
+        type: "ADD_DISCOUNT",
+        payload: { 
+            value,
+            code
+        }
     }
 };
 

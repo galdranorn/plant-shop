@@ -2,7 +2,7 @@ import React from 'react';
 import './Cart.scss';
 import { bindActionCreators } from 'redux';
 import { connect } from 'react-redux';
-import { addQty, removeQty } from '../../actions/actions-cart';
+import { addDiscount, addQty, removeQty } from '../../actions/actions-cart';
 
 export class CartActive extends React.Component {
 
@@ -28,6 +28,15 @@ export class CartActive extends React.Component {
         });
     }
 
+    acceptDiscountCode = (event) => {
+        if (event.target.value === "spring2019") { 
+            this.props.addDiscount(0.8, event.target.value);
+        }
+        else if (event.target.value === "monstera") {
+            this.props.addDiscount(0.9, event.target.value)
+        }
+    }
+
     render() {
         return (
             <div>
@@ -37,11 +46,15 @@ export class CartActive extends React.Component {
                         
                 <div className="cart__active--discount row">
                     <div className="col-8"></div>
-                    <div className="col-4"><input className="cart__active--functionalities-discount-input" placeholder="discount code" /></div>
+                    <div className="col-4">
+                        <input disabled={this.props.cart.discount} onChange={this.acceptDiscountCode} placeholder={this.props.cart.code} className="cart__active--discount-input" />
+                    </div>
                 </div>
                 <div className="cart__active--sum row">
                     <div className="col-8"></div>
-                    <div className="cart__active--sum-cash col-4">Sum to pay: {this.props.cart.summary} $</div>
+                    <div className="cart__active--sum-cash col-4">
+                        <p> Sum to pay: <span className={this.props.cart.discount ? 'cart__active--sum-cash-green' : null }>{this.props.cart.summary} $</span></p>
+                    </div>
                 </div>
 
             </div>
@@ -59,7 +72,8 @@ function matchDispatchToProps(dispatch) {
     return bindActionCreators(
         {
             addQty,
-            removeQty
+            removeQty,
+            addDiscount
         }, dispatch
     )
 }

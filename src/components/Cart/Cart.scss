@@ -32,9 +32,17 @@
             &-input {
                 text-align: center;
                 padding: 5px;
+                &:disabled {
+                    background: lightgreen;
+                    color: green;
+                }
             }
+            
             &-cash {
                 font-weight: bold;
+                &-green {
+                    color: green;
+                }
             }
         }
     }

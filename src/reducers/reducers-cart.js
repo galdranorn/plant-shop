@@ -1,4 +1,10 @@
-export default function (state={"added": [], "summary": 0}, action) {
+export default function (
+    state = {
+        "added": [], 
+        "summary": 0,
+        "discount": false,
+        "code": "discount code"
+    }, action) {
     switch (action.type) {
         case "ADD_TO_CART":
             let added = [...state.added, action.payload];
@@ -11,6 +17,16 @@ export default function (state={"added": [], "summary": 0}, action) {
             return {
                 "added": added,
                 "summary": state.summary + action.payload.price,
+                "discount": state.discount,
+                "code": state.code
+            }
+
+        case"ADD_DISCOUNT":
+            return {
+                "added": [...state.added],
+                "summary": state.summary*action.payload.value,
+                "discount": true,
+                "code": action.payload.code
             }
 
         case "ADD_QTY":
@@ -18,6 +34,8 @@ export default function (state={"added": [], "summary": 0}, action) {
             return {
                 "added": [...state.added],
                 "summary": state.summary + action.payload.price,
+                "discount": state.discount,
+                "code": state.code
             }
 
         case "REMOVE_QTY":
@@ -25,6 +43,8 @@ export default function (state={"added": [], "summary": 0}, action) {
             return {
                 "added": state.added.filter(function (object) { return object.quantity !== 0 }),
                 "summary": state.summary - action.payload.price,
+                "discount": state.discount,
+                "code": state.code
             }
 
         default: 
