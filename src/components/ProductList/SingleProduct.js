@@ -6,12 +6,13 @@ export const Product = (props) => (
     <NavLink
         exact to={"/product/" + props.id}
         index={props.index}
-        className="productList__product col-5">
-
-        <p className="productList__product--info">{props.additionalInfo}</p>
-        <img className="productList__product--photo" src={props.imgSrc} alt="product" />
-        <p className="productList__product--name">{props.name}</p>
-        <p className="productList__product--price">${props.price}</p>
+        className="productList__product col-sm-12 col-md-6 col-lg-6">
+        <div className="productList__product--frame">
+            <p className="productList__product--info">{props.additionalInfo}</p>
+            <img className="productList__product--photo" src={props.imgSrc} alt="product" />
+            <p className="productList__product--name">{props.name}</p>
+            <p className="productList__product--price">${props.price}</p>
+        </div>
 
     </NavLink>
 );

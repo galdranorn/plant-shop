@@ -19,8 +19,8 @@ export default class Cart extends React.Component {
                     <CartActive />
 
                     <div className="cart__active--pay row">
-                        <div className="col-8"></div>
-                        <div className="col-4">
+                        <div className="col-sm-12 col-md-12 col-lg-8"></div>
+                        <div className="col-sm-12 col-md-12 col-lg-4">
                             <button className="cart__active--functionalities-pay" onClick={() => { this.initSummary() }}>Pay and finish order</button>
                         </div>
                     </div>

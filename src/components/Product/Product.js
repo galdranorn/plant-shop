@@ -23,7 +23,7 @@ export class Product extends React.Component {
     return (
       <div className="productPage container">
         <div className="row">
-          <div className="productPage__image col-4">
+          <div className="productPage__image col-sm-12 col-md-4 col-lg-4">
             <p className="productPage__image--info">
               {this.props.products[this.state.id].additionalInfo}
             </p>
@@ -34,7 +34,7 @@ export class Product extends React.Component {
             />
           </div>
 
-          <div className="productPage__description col-7">
+          <div className="productPage__description col-sm-12 col-md-8 col-lg-8">
             <p className="productPage__description--name">
               {this.props.products[this.state.id].name}
             </p>

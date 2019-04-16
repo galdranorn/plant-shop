@@ -1,0 +1,15 @@
+.rules__header, .rules__summary {
+  text-align: center;
+  padding: 20px;
+}
+
+.rules__point {
+  padding: 10px;
+  color: #666;
+}
+
+.rules__summary {
+  font-weight: bold;
+  font-size: 1.1em;
+}
+/*# sourceMappingURL=Rules.css.map */

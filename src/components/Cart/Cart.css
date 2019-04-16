@@ -1,0 +1,125 @@
+.cart__name {
+  font-size: 2em;
+  padding: 30px;
+  text-align: center;
+}
+
+.cart__active--product {
+  padding: 5px;
+  margin: 5px 0;
+  border: 1px #ddd solid;
+}
+
+.cart__active--product-photo-img {
+  width: 100%;
+  height: auto;
+}
+
+.cart__active--product-quantity {
+  text-align: center;
+}
+
+.cart__active--product-quantity-button, .cart__active--product-quantity-value {
+  display: inline-block;
+  margin: 20px 10px;
+  text-align: center;
+}
+
+.cart__active--product-price {
+  text-align: center;
+  padding: 20px 0;
+}
+
+.cart__active--discount, .cart__active--sum, .cart__active--pay {
+  text-align: right;
+  padding: 5px;
+  margin: 5px;
+}
+
+.cart__active--discount-input, .cart__active--sum-input, .cart__active--pay-input {
+  text-align: center;
+  padding: 5px;
+}
+
+.cart__active--discount-input:disabled, .cart__active--sum-input:disabled, .cart__active--pay-input:disabled {
+  background: lightgreen;
+  color: green;
+}
+
+.cart__active--discount-cash, .cart__active--sum-cash, .cart__active--pay-cash {
+  font-weight: bold;
+}
+
+.cart__active--discount-cash-green, .cart__active--sum-cash-green, .cart__active--pay-cash-green {
+  color: green;
+}
+
+.cart__summary--line {
+  background: #efefef;
+  font-weight: bold;
+  padding: 5px;
+  margin: 5px 0;
+  border: 1px #dddddd solid;
+}
+
+.cart__summary--line-element, .cart__summary--line-element-sum {
+  text-align: center;
+}
+
+.cart__summary--line-element-name, .cart__summary--line-element-sum {
+  font-size: 1.5em;
+}
+
+.cart__summary--product {
+  padding: 5px;
+  margin: 5px 0;
+  border: 1px #ddd solid;
+}
+
+.cart__summary--product-price {
+  text-align: center;
+}
+
+@media (max-width: 992px) {
+  .cart__active--product-description {
+    font-size: 0.9em;
+  }
+  .cart__active--product-description-name {
+    text-align: center;
+    font-weight: bold;
+    font-size: 1.4em;
+  }
+  .cart__active--product-price {
+    font-size: 1.3em;
+    font-weight: bold;
+  }
+  .cart__active--discount, .cart__active--sum, .cart__active--pay {
+    text-align: center;
+  }
+}
+
+@media (max-width: 768px) {
+  .cart__active--product-photo {
+    text-align: center;
+  }
+  .cart__active--product-photo-img {
+    max-width: 200px;
+  }
+  .cart__active--product-quantity {
+    text-align: center;
+  }
+  .cart__summary--line-name {
+    text-align: center;
+  }
+  .cart__summary--line-element-sum {
+    font-size: 1.2em;
+  }
+  .cart__summary--line-element-name {
+    font-size: 1em;
+    text-align: center;
+  }
+  .cart__summary--product-name {
+    text-align: center;
+  }
+}
+/*# sourceMappingURL=Cart.css.map */

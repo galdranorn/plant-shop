@@ -15,11 +15,15 @@
                 width: 100%;
                 height: auto;
             }
-            &-quantity-button, &-quantity-value {
-                display: inline-block;
-                margin: 20px 10px;
+            &-quantity {
                 text-align: center;
+                &-button, &-value {
+                    display: inline-block;
+                    margin: 20px 10px;
+                    text-align: center;
+                }
             }
+            
             &-price {
                 text-align: center;
                 padding: 20px 0;
@@ -68,6 +72,66 @@
             border: 1px #ddd solid;
             &-price {
                 text-align: center;
+            }
+        }
+    }
+}
+
+@media(max-width: 992px) {
+    .cart__active {
+        &--product {
+            &-description {
+                font-size: 0.9em;
+            }
+            &-description-name {
+                text-align: center;
+                font-weight: bold;
+                font-size: 1.4em;
+            }
+            &-price {
+                font-size: 1.3em;
+                font-weight: bold;
+            }
+        }
+        &--discount, &--sum, &--pay {
+            text-align: center;
+        }
+    }
+}
+
+@media(max-width: 768px) {
+    .cart {
+    // cart 'active' mode
+        &__active--product {
+            &-photo {
+                text-align: center;
+                &-img {
+                    max-width: 200px;
+                }
+            }
+            &-quantity {
+                text-align: center;
+            }
+        }
+    
+    // cart in 'summary' mode
+        &__summary {
+            &--line {
+                &-name {
+                    text-align: center;
+                }
+                &-element-sum {
+                    font-size: 1.2em;
+                }
+                &-element-name {
+                    font-size: 1em;
+                    text-align: center;
+                }
+            }
+            &--product {
+                &-name {
+                    text-align: center;
+                }
             }
         }
     }

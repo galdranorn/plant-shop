@@ -1,0 +1,35 @@
+.contact {
+  text-align: center;
+}
+
+.contact__header {
+  padding: 20px;
+}
+
+.contact__data {
+  margin: 30px;
+  padding: 20px;
+  color: #666;
+}
+
+.contact__data--name, .contact__data--open {
+  font-weight: bold;
+  font-size: 1.3em;
+}
+
+.contact__data--phone, .contact__data--mail {
+  padding: 10px;
+  display: block;
+  color: green;
+  text-decoration: none;
+}
+
+.contact__data--phone:hover, .contact__data--mail:hover {
+  color: green;
+  font-weight: bold;
+}
+
+.contact__data--open {
+  margin: 40px;
+}
+/*# sourceMappingURL=Contact.css.map */

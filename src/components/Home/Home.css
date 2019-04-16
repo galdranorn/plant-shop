@@ -1,0 +1,26 @@
+.home {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.home__sorting--header {
+  font-weight: bold;
+  color: #555;
+}
+
+.home__sorting--list {
+  list-style-type: none;
+  padding: 0 0 30px;
+  font-size: 0.9em;
+  color: #777;
+  border-bottom: 1px solid #777;
+}
+
+@media (max-width: 768px) {
+  .home__sorting {
+    text-align: center;
+    margin-top: 10px;
+  }
+}
+/*# sourceMappingURL=Home.css.map */

@@ -1,0 +1,9 @@
+{
+    "version": 3,
+    "mappings": "AACK,AAAD,YAAS,CAAC;EACN,UAAU,EAAE,MAAM;EAClB,OAAO,EAAE,IAAI;CAChB;;AAEA,AAAD,WAAQ,CAAC;EACL,OAAO,EAAE,IAAI;CAShB;;AAPI,AAAD,qBAAW,CAAC;EACR,WAAW,EAAE,IAAI;CACpB;;AACA,AAAD,mBAAS,CAAC;EACN,KAAK,EAAE,IAAI;EACX,UAAU,EAAE,MAAM;CACrB",
+    "sources": [
+        "Faq.scss"
+    ],
+    "names": [],
+    "file": "Faq.css"
+}

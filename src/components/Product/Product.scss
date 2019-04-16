@@ -24,3 +24,22 @@
         }
     }
 }
+
+@media(max-width: 768px) {
+    .productPage {
+        text-align: center;
+        &__image--photo {
+            max-width: 250px;
+        }
+        &__description {
+            padding: 10px;
+            font-size: 0.9em;
+            &--name {
+                font-size: 1.2em;
+            }
+            &--button {
+                margin: 5px 0 20px;
+            }
+        }
+    }
+}

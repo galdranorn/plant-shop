@@ -1,0 +1,18 @@
+.faq__header {
+  text-align: center;
+  padding: 20px;
+}
+
+.faq__point {
+  padding: 20px;
+}
+
+.faq__point--question {
+  font-weight: bold;
+}
+
+.faq__point--answer {
+  color: #666;
+  font-style: italic;
+}
+/*# sourceMappingURL=Faq.css.map */
