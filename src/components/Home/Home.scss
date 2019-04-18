@@ -15,11 +15,15 @@
             color: #777;
             border-bottom: 1px solid #777;
 
-            &-element {}
+            &-element:hover {
+                text-decoration: underline;
+                cursor: pointer;
+            }
 
         }
     }
 }
+
 
 @media(max-width: 768px) {
     .home {

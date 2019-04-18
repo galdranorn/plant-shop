@@ -2,7 +2,7 @@ import React from 'react';
 import './Cart.scss';
 import { bindActionCreators } from 'redux';
 import { connect } from 'react-redux';
-import { addDiscount, addQty, removeQty } from '../../actions/actions-cart';
+import { addDiscount, addQty, removeQty, removeProduct } from '../../actions/actions-cart';
 
 export class CartActive extends React.Component {
 
@@ -22,8 +22,10 @@ export class CartActive extends React.Component {
                     </div>
                     <div className="cart__active--product-quantity col-sm-6 col-md-8 col-lg-2">
                         <button className="cart__active--product-quantity-button" onClick={() => this.props.addQty(product)}>+</button>
+                        {/* here should be an input but did not manage to do this before deadline :-) */}
                         <p className="cart__active--product-quantity-value">{product.quantity}</p>
                         <button className="cart__active--product-quantity-button" onClick={() => this.props.removeQty(product)}>-</button>
+                        <p className="cart__active--product-delete" onClick={() => this.props.removeProduct(product)}>Delete product</p>
                     </div>
                 </div>
             );
@@ -75,8 +77,10 @@ function matchDispatchToProps(dispatch) {
         {
             addQty,
             removeQty,
-            addDiscount
-        }, dispatch
+            addDiscount,
+            removeProduct
+        }, 
+        dispatch
     )
 }
 

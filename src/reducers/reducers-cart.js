@@ -46,6 +46,15 @@ export default function (
                 "discount": state.discount,
                 "code": state.code
             }
+        
+        case "REMOVE_PRODUCT":
+            state.added.map((product) => { if (product.id === action.payload.id) { product.quantity = 0 } })
+            return {
+                "added": state.added.filter(function (object) { return object.quantity !== 0 }),
+                "summary": state.summary - action.payload.price,
+                "discount": state.discount,
+                "code": state.code
+            }
 
         default: 
     }

@@ -6,7 +6,7 @@ export const Footer = () => {
     return (
         <div className="header justify-content-between">
             <div className="footer__copyright">
-                Copyright galdranorn 2019
+                Copyright <a href="https://github.com/galdranorn" className="footer__copyright--link">galdranorn</a> 2019
             </div>
             <div className="footer__links">
                 <NavLink 
@@ -32,12 +32,6 @@ export const Footer = () => {
                     activeClassName="footer__links--active" 
                     exact to="/contact">
                     Contact
-                </NavLink>
-                <NavLink 
-                    className="footer__links--link"
-                    activeClassName="footer__links--active" 
-                    exact to="/cart">
-                    Cart
                 </NavLink>
             </div>
         </div>

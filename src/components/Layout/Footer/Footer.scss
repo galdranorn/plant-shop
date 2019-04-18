@@ -4,6 +4,14 @@
 
     &__copyright {
         color: #666;
+        &--link {
+            color: #333;
+            font-weight: bold;
+            &:hover {
+                color: green;
+                text-decoration: none;
+            }
+        }
     }
 
     &__links {

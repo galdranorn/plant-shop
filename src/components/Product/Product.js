@@ -24,9 +24,6 @@ export class Product extends React.Component {
       <div className="productPage container">
         <div className="row">
           <div className="productPage__image col-sm-12 col-md-4 col-lg-4">
-            <p className="productPage__image--info">
-              {this.props.products[this.state.id].additionalInfo}
-            </p>
             <img 
               className="productPage__image--photo" 
               src={this.props.products[this.state.id].imgSrc} 

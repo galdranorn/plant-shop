@@ -19,8 +19,25 @@
                 text-align: center;
                 &-button, &-value {
                     display: inline-block;
-                    margin: 20px 10px;
+                    margin: 20px 5px;
                     text-align: center;
+                }
+                &-button {
+                    background: white;
+                    border: none;
+                }
+                &-value {
+                    background: #eee;
+                    padding: 10px;
+                }
+            }
+            &-delete {
+                font-size: 0.7em;
+                color: darkred;
+                font-style: italic;
+                &:hover {
+                    color: red;
+                    cursor: pointer;
                 }
             }
             
@@ -48,6 +65,12 @@
                     color: green;
                 }
             }
+        }
+        &--functionalities-pay {
+            background: black;
+            border: none;
+            color: white;
+            padding: 5px 15px;
         }
     }
 

@@ -37,7 +37,7 @@ export const Header = () => {
                     className="header__links--link"
                     activeClassName="header__links--active"
                     exact to="/cart">
-                    Cart
+                    <span className="fas fa-shopping-basket basketIcon"></span>
                 </NavLink>
             </div>
         </div>

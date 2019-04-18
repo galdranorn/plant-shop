@@ -28,17 +28,6 @@ export class ProductList extends React.Component {
         const { currentPage } = this.state;
         return (
             <div className="productList col-sm-12 col-md-8 col-lg-9">
-                <div className="productList__pagination row">
-                    <Pagination aria-label="Page navigation example">
-                        {[...Array(this.pagesCount)].map((page, i) => 
-                            <PaginationItem active={i === currentPage} key={i}>
-                                <PaginationLink onClick={e => this.handleClick(e, i)} href="#">
-                                    {i + 1}
-                                </PaginationLink>
-                            </PaginationItem>
-                        )}
-                    </Pagination>
-                </div>
                 <div className="productList__products row">
                     {
                         (this.props.sorted.slice(this.state.currentProducts[0], this.state.currentProducts[1])).map((product, i) => {
@@ -59,6 +48,17 @@ export class ProductList extends React.Component {
                     }
                         )
                     }
+                </div>
+                <div className="productList__pagination row">
+                    <Pagination aria-label="Page navigation example">
+                        {[...Array(this.pagesCount)].map((page, i) => 
+                            <PaginationItem active={i === currentPage} key={i}>
+                                <PaginationLink onClick={e => this.handleClick(e, i)} href="#">
+                                    {i + 1}
+                                </PaginationLink>
+                            </PaginationItem>
+                        )}
+                    </Pagination>
                 </div>
             </div>
         );

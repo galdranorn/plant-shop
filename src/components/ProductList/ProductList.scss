@@ -2,7 +2,7 @@
     text-align: center;
 
     &__pagination {
-        justify-content: center;
+        justify-content: flex-end;
     }
     &__product {
         display: inline-block;
@@ -35,6 +35,21 @@
             width: 100%;
             height: auto;
         }
+    }
+}
+.pagination {
+    padding: 0 20px;
+    .page-link {
+        border: none;
+        color: #888;
+    }
+    .active .page-link {
+        color: #333;
+        font-weight: bold;
+        background: white;
+    }
+    .page-item {
+        border: none;
     }
 }
 

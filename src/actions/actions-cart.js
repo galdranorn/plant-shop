@@ -21,3 +21,10 @@ export const removeQty = (product) => {
         payload: product
     }
 };
+
+export const removeProduct = (product) => {
+    return {
+        type: "REMOVE_PRODUCT",
+        payload: product
+    }
+};
