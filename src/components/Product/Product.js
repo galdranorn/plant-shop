@@ -36,7 +36,7 @@ export class Product extends React.Component {
               {this.props.products[this.state.id].name}
             </p>
             <p className="productPage__description--price">
-              ${this.props.products[this.state.id].price}
+              ${this.props.products[this.state.id].price.toFixed(2)}
             </p>
             <p>
             {this.props.products[this.state.id].text}

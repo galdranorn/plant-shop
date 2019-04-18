@@ -11,7 +11,7 @@ export const Product = (props) => (
             <p className="productList__product--info">{props.additionalInfo}</p>
             <img className="productList__product--photo" src={props.imgSrc} alt="product" />
             <p className="productList__product--name">{props.name}</p>
-            <p className="productList__product--price">${props.price}</p>
+            <p className="productList__product--price">${props.price.toFixed(2)}</p>
         </div>
 
     </NavLink>

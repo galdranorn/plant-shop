@@ -30,7 +30,7 @@ export class CartSummary extends React.Component {
                 {this.createSummary()}
                 <div className="row cart__summary--line"> 
                     <div className="cart__summary--line-element-name col-xs-12 col-sm-6 col-md-10 col-lg-10">Sum to pay</div>
-                    <div className="cart__summary--line-element-sum col-xs-12 col-sm-6 col-md-2 col-lg-2">$ {this.props.cart.summary}</div>
+                    <div className="cart__summary--line-element-sum col-xs-12 col-sm-6 col-md-2 col-lg-2">$ {this.props.cart.summary.toFixed(2)}</div>
                 </div>
             </div>
         );

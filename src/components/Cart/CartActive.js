@@ -18,7 +18,7 @@ export class CartActive extends React.Component {
                         <p className="cart__active--product-description-text">{product.text}</p>
                     </div>
                     <div className="cart__active--product-price col-sm-6 col-md-4 col-lg-2">
-                        ${product.price * product.quantity}
+                        ${(product.price * product.quantity).toFixed(2)}
                     </div>
                     <div className="cart__active--product-quantity col-sm-6 col-md-8 col-lg-2">
                         <button className="cart__active--product-quantity-button" onClick={() => this.props.addQty(product)}>+</button>
@@ -57,7 +57,7 @@ export class CartActive extends React.Component {
                 <div className="cart__active--sum row">
                     <div className="col-sm-12 col-md-12 col-lg-8"></div>
                     <div className="cart__active--sum-cash col-sm-12 col-md-12 col-lg-4">
-                        <p> Sum to pay: <span className={this.props.cart.discount ? 'cart__active--sum-cash-green' : null }>{this.props.cart.summary} $</span></p>
+                        <p> Sum to pay: <span className={this.props.cart.discount ? 'cart__active--sum-cash-green' : null }>{this.props.cart.summary.toFixed(2)} $</span></p>
                     </div>
                 </div>
 

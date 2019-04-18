@@ -3,7 +3,8 @@ export default function (
         "added": [], 
         "summary": 0,
         "discount": false,
-        "code": "discount code"
+        "code": "discount code",
+        "discountValue": 1
     }, action) {
     switch (action.type) {
         case "ADD_TO_CART":
@@ -16,9 +17,10 @@ export default function (
             })
             return {
                 "added": added,
-                "summary": state.summary + action.payload.price,
+                "summary": state.summary + action.payload.price*state.discountValue,
                 "discount": state.discount,
-                "code": state.code
+                "code": state.code,
+                "discountValue": state.discountValue
             }
 
         case"ADD_DISCOUNT":
@@ -26,34 +28,39 @@ export default function (
                 "added": [...state.added],
                 "summary": state.summary*action.payload.value,
                 "discount": true,
-                "code": action.payload.code
+                "code": action.payload.code,
+                "discountValue": action.payload.value
             }
 
         case "ADD_QTY":
             state.added.map((product) => { if (product.id === action.payload.id) { product.quantity += 1 } })
             return {
                 "added": [...state.added],
-                "summary": state.summary + action.payload.price,
+                "summary": state.summary + action.payload.price*state.discountValue,
                 "discount": state.discount,
-                "code": state.code
+                "code": state.code,
+                "discountValue": state.discountValue
             }
 
         case "REMOVE_QTY":
             state.added.map((product) => { if (product.id === action.payload.id) { product.quantity -= 1 } })
+            if(state.summary<0){state.summary=0;}
             return {
                 "added": state.added.filter(function (object) { return object.quantity !== 0 }),
-                "summary": state.summary - action.payload.price,
+                "summary": state.summary - action.payload.price*state.discountValue,
                 "discount": state.discount,
-                "code": state.code
+                "code": state.code,
+                "discountValue": state.discountValue
             }
         
         case "REMOVE_PRODUCT":
             state.added.map((product) => { if (product.id === action.payload.id) { product.quantity = 0 } })
             return {
                 "added": state.added.filter(function (object) { return object.quantity !== 0 }),
-                "summary": state.summary - action.payload.price,
+                "summary": state.summary - action.payload.price*state.discountValue,
                 "discount": state.discount,
-                "code": state.code
+                "code": state.code,
+                "discountValue": state.discountValue
             }
 
         default: 

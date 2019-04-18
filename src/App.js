@@ -13,6 +13,7 @@ import Product from './components/Product/Product';
 import Faq from './components/Samples/Faq/Faq';
 import Rules from './components/Samples/Rules/Rules';
 import Contact from './components/Samples/Contact/Contact';
+import NoMatch from './components/Samples/NoMatch/NoMatch';
 
 export default class App extends React.Component {
   render() {
@@ -26,6 +27,7 @@ export default class App extends React.Component {
             <Route exact path={'/faq'} component={Faq} />
             <Route exact path={'/rules'} component={Rules} />
             <Route exact path={'/contact'} component={Contact} />
+            <Route component={NoMatch} />
           </Switch>
         </Layout>
       </BrowserRouter>

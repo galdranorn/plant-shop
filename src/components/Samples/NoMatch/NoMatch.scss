@@ -1,0 +1,9 @@
+.noMatch {
+    padding: 30px;
+    &__header, &__point {
+        text-align: center;
+    }
+    &__header {
+        padding: 20px;
+    }
+}
