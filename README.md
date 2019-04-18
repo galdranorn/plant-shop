@@ -1,68 +1,65 @@
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+# Plant shop project
+Front-end of the plant shop based on PSD files.
+[Click here to view live](https://plant-shop-79b92.firebaseapp.com/)
 
-## Available Scripts
 
-In the project directory, you can run:
+## Getting Started
 
-### `npm start`
+ If demo is not enough download the repo, keep calm and `npm install`.
 
-Runs the app in the development mode.<br>
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+Then:
 
-The page will reload if you make edits.<br>
-You will also see any lint errors in the console.
+ - If you want to open the project locally, run:
+`npm start`
+Project will be running locally on localhost:3000.
 
-### `npm test`
+ - If you want to build production version, run:
+`npm run build`
+Project will be build in /build folder.
 
-Launches the test runner in the interactive watch mode.<br>
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
 
-### `npm run build`
+## Functionalities
 
-Builds the app for production to the `build` folder.<br>
-It correctly bundles React in production mode and optimizes the build for the best performance.
+•	Sorting products by name or value, ascending or descending.
+•	Products pagination on the main page.
+•	Add products to the cart from single product page view.
+•	Increase or decrease value and delete product from the cart view.
+•	Use code ‘spring2019’ for 20% or ’monstera’ for 10% discount in the cart view.
+•	Prepare cart summary.
 
-The build is minified and the filenames include the hashes.<br>
-Your app is ready to be deployed!
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+## Developed with
 
-### `npm run eject`
+•	[Sass](https://sass-lang.com/) – CSS preprocessor
+•	[React](https://github.com/facebook/react) – JavaScript library
+•	[Redux](https://github.com/reduxjs/redux) - state container for JavaScript apps 
+•	[BootStrap](https://github.com/twbs/bootstrap) - HTML, CSS, and JavaScript framework
+•	[ReactStrap](https://reactstrap.github.io/) - stateless React components for Bootstrap 4.
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+## CSS classes
 
-Instead, it will copy all the configuration files and the transitive dependencies (Webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+For CSS classes [BEM](http://getbem.com/) convention was used: block__element--modifier scheme, only classes used to style the components. 
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+Some BootStrap classes are used for RWD.
 
-## Learn More
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+## Files structure
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+Files structure looks like below:
 
-### Code Splitting
+ - /src - components, actions and reducers for app
+	 - /actions - actions defined for Cart and ProductPage components
+	 - /reducers - reducers for all defined actions and data about products
+	 - /components - all components in more or less logical order
+ - /public
+	 - /images - all photos, icons and splash
+ - /build - production version of app
+	 - /js 
+	 - /css
 
-This section has moved here: https://facebook.github.io/create-react-app/docs/code-splitting
+## Copyrights
 
-### Analyzing the Bundle Size
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size
-
-### Making a Progressive Web App
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app
-
-### Advanced Configuration
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/advanced-configuration
-
-### Deployment
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/deployment
-
-### `npm run build` fails to minify
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify
+Hello, I'm [galdranorn](https://github.com/galdranorn). Thanks for enjoying my app. 
+Any comments regarding code is welcome.
+Made with ❤ in 2019
